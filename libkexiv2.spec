@@ -11,6 +11,7 @@ URL: http://www.kde.org
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.bz2
 BuildRequires: kdelibs4-devel >= 2:%{version}
 BuildRequires: libexiv-devel
+BuildRequires: automoc4
 Conflicts: %{old_libkexiv2} < 2:4.6.90
 
 %description
