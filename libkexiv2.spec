@@ -2,7 +2,7 @@
 
 Name: libkexiv2
 Summary: Wrapper around exiv2 library
-Version: 4.7.97
+Version: 4.8.0
 Release: 1
 Epoch: 2
 Group: System/Libraries
