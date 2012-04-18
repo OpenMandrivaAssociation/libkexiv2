@@ -2,13 +2,13 @@
 
 Name: libkexiv2
 Summary: Wrapper around exiv2 library
-Version: 4.8.1
+Version: 4.8.2
 Release: 1
 Epoch: 2
 Group: System/Libraries
 License: GPLv2
 URL: http://www.kde.org
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.xz
 BuildRequires: kdelibs4-devel >= 2:%{version}
 BuildRequires: libexiv-devel
 BuildRequires: automoc4
