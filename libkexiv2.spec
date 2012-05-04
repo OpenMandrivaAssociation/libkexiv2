@@ -3,7 +3,7 @@
 Name: libkexiv2
 Summary: Wrapper around exiv2 library
 Version: 4.8.2
-Release: 1
+Release: 2
 Epoch: 2
 Group: System/Libraries
 License: GPLv2
