@@ -24,7 +24,7 @@ metadata as EXIF/IPTC and XMP.
 
 #--------------------------------------------------------------------
 
-%define kexiv2_major 10
+%define kexiv2_major 11
 %define	libkexiv2 %mklibname kexiv2_ %kexiv2_major
 
 %package -n %{libkexiv2}
