@@ -1,18 +1,16 @@
-%define old_libkexiv2 %mklibname kexiv2_ 9
-
-Name: libkexiv2
-Summary: Wrapper around exiv2 library
-Version: 4.8.97
-Release: 1
-Epoch: 2
-Group: System/Libraries
-License: GPLv2
-URL: http://www.kde.org
-Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/%name-%version.tar.xz
-BuildRequires: kdelibs4-devel >= 2:%{version}
-BuildRequires: libexiv-devel
-BuildRequires: automoc4
-Conflicts: %{old_libkexiv2} < 2:4.6.90
+Name:		libkexiv2
+Summary:	KDE4 wrapper around exiv2 library
+Version:	4.8.97
+Release:	1
+Epoch:		2
+Group:		System/Libraries
+License:	GPLv2
+URL:		http://www.kde.org
+Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	kdelibs4-devel
+BuildRequires:	pkgconfig(exiv2)
+BuildRequires:	automoc4
+Conflicts:	%{mklibname kexiv2_ 9} < 2:4.6.90
 
 %description
 Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
@@ -25,11 +23,12 @@ metadata as EXIF/IPTC and XMP.
 #--------------------------------------------------------------------
 
 %define kexiv2_major 11
-%define	libkexiv2 %mklibname kexiv2_ %kexiv2_major
+%define libkexiv2 %mklibname kexiv2_ %{kexiv2_major}
 
 %package -n %{libkexiv2}
-Summary: %{name} library
-Group: System/Libraries
+Summary:	%{name} library
+Group:		System/Libraries
+Obsoletes:	%{mklibname kexiv2_ 10} < 2:4.8.90
 
 %description -n %{libkexiv2}
 Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
@@ -41,21 +40,21 @@ metadata as EXIF/IPTC and XMP.
 #--------------------------------------------------------------------
 
 %package devel
-Summary: Devel stuff for %name
-Group: Development/KDE and Qt
-Requires: kdelibs4-devel >= 2:%{version}
-Requires: libexiv-devel
-Requires: %libkexiv2 = %epoch:%version-%release
-Conflicts: kdegraphics4-devel < 2:4.6.10
+Summary:	Devel stuff for %{name}
+Group:		Development/KDE and Qt
+Requires:	kdelibs4-devel
+Requires:	pkgconfig(exiv2)
+Requires:	%{libkexiv2} = %{EVRD}
+Conflicts:	kdegraphics4-devel < 2:4.6.10
 
 %description devel
 This package contains header files needed if you wish to build applications
 based on kdegraphics.
 
 %files devel
-%_includedir/libkexiv2
-%_libdir/pkgconfig/libkexiv2.pc
-%_libdir/libkexiv2.so
+%{_includedir}/libkexiv2
+%{_libdir}/pkgconfig/libkexiv2.pc
+%{_libdir}/libkexiv2.so
 
 #----------------------------------------------------------------------
 
