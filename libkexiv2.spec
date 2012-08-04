@@ -1,12 +1,12 @@
 Name:		libkexiv2
 Summary:	KDE4 wrapper around exiv2 library
-Version:	4.8.97
-Release:	1
+Version: 4.9.0
+Release: 1
 Epoch:		2
 Group:		System/Libraries
 License:	GPLv2
 URL:		http://www.kde.org
-Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%{name}-%{version}.tar.xz
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	automoc4
