@@ -1,6 +1,6 @@
 Name:		libkexiv2
 Summary:	KDE4 wrapper around exiv2 library
-Version: 4.9.2
+Version: 4.9.3
 Release: 1
 Epoch:		2
 Group:		System/Libraries
