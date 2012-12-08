@@ -1,7 +1,7 @@
 Name:		libkexiv2
 Summary:	KDE4 wrapper around exiv2 library
-Version: 4.9.3
-Release: 1
+Version:	4.9.4
+Release:	1
 Epoch:		2
 Group:		System/Libraries
 License:	GPLv2
@@ -67,4 +67,102 @@ based on kdegraphics.
 
 %install
 %makeinstall_std -C build
+
+%changelog
+* Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.9.4-1
+- New version 4.9.4
+
+* Wed Nov 07 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.9.3-1
+- New version 4.9.3
+
+* Thu Oct 04 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.9.2-1
+- New version 4.9.2
+
+* Sat Sep 08 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.9.1-1
+- New version 4.9.1
+
+* Mon Aug 13 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.9.0-1
+- New version 4.9.0
+
+* Wed Jul 18 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.8.97-1
+- New version 4.8.97
+- Update summary
+
+* Sat Jun 30 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.8.95-1
+- New version 4.8.95
+- New library major 11
+
+* Fri Jun 08 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 2:4.8.4-69.1mib2010.2
+- New version 4.8.4
+- MIB (Mandriva International Backports)
+
+* Fri May 04 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 2:4.8.3-69.1mib2010.2
+- New version 4.8.3
+- MIB (Mandriva International Backports)
+
+* Wed Apr 04 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 2:4.8.2-69.1mib2010.2
+- New version 4.8.2
+- MIB (Mandriva International Backports)
+
+* Wed Mar 07 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 2:4.8.1-69.1mib2010.2
+- New version 4.8.1
+- MIB (Mandriva International Backports)
+
+* Mon Feb 20 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 2:4.8.0-69.1mib2010.2
++ Revision: 762492
+- Backport to 2010.2 for MIB users
+- MIB (Mandriva International Backports)
+
+* Thu Jan 19 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.8.0-1
++ Revision: 762492
+- New upstream tarball
+
+* Fri Jan 06 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.97-1
++ Revision: 758081
+- New upstream tarball
+
+* Thu Dec 22 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.95-1
++ Revision: 744560
+- New upstream tarball
+
+* Fri Dec 09 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.90-1
++ Revision: 739315
+- New upstream tarball $NEW_VERSION
+
+* Tue Nov 22 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.80-1
++ Revision: 732315
+- Add Automoc4 as buildrequires ( to workaround a rpm5/iurt bug)
+- New upstream tarball 4.7.80
+
+* Tue Aug 23 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.41-1
++ Revision: 696279
+- New version 4.7.41
+
+* Sun Jul 31 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.40-1
++ Revision: 692506
+- Fix BR
+- import libkexiv2
+
+
+* Sun Mar 04 2007 Angelo Naselli <anaselli@mandriva.org> 0.1.1-2mdv2007.0
++ Revision: 132340
+- rebuilt for new libexiv2
+
+* Sat Feb 24 2007 Angelo Naselli <anaselli@mandriva.org> 0.1.1-1mdv2007.1
++ Revision: 125441
+- readded kdebase-devel
+- removed kdebase-devel dependency
+- new version 0.1.1
+
+* Wed Feb 14 2007 Angelo Naselli <anaselli@mandriva.org> 0.1.0-2mdv2007.1
++ Revision: 120793
+- wrong libname changed
+- added right Povides field
+
+* Mon Feb 12 2007 Angelo Naselli <anaselli@mandriva.org> 0.1.0-1mdv2007.1
++ Revision: 118993
+- Import libkexiv2
+
+* Mon Feb 12 2007 Angelo Naselli <anaselli@mandriva.org> 0.1.0mdv2007.1
+- built mdk version
 
