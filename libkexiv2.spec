@@ -1,16 +1,20 @@
+%define major 11
+%define libname %mklibname kexiv2_ %{major}
+%define devname %mklibname kexiv2 -d
+
 Summary:	KDE4 wrapper around exiv2 library
 Name:		libkexiv2
 Version:	4.12.1
 Release:	1
 Epoch:		2
-Group:		System/Libraries
-License:	GPLv2
+License:	GPLv2+
+Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	automoc4
-Conflicts:	%{mklibname kexiv2_ 9} < 2:4.6.90
+Conflicts:	%{_lib}kexiv2_9 < 2:4.6.90
 
 %description
 Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
@@ -22,38 +26,38 @@ metadata as EXIF/IPTC and XMP.
 
 #--------------------------------------------------------------------
 
-%define kexiv2_major 11
-%define libkexiv2 %mklibname kexiv2_ %{kexiv2_major}
-
-%package -n %{libkexiv2}
+%package -n %{libname}
 Summary:	%{name} library
 Group:		System/Libraries
-Obsoletes:	%{mklibname kexiv2_ 10} < 2:4.8.90
-Requires:	%{name} = %{EVRD}
+Obsoletes:	%{_lib}kexiv2_10 < 2:4.8.90
+Requires:	%{name}
 
-%description -n %{libkexiv2}
+%description -n %{libname}
 Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
 metadata as EXIF/IPTC and XMP.
 
-%files -n %{libkexiv2}
-%{_kde_libdir}/libkexiv2.so.%{kexiv2_major}*
+%files -n %{libname}
+%{_kde_libdir}/libkexiv2.so.%{major}*
 
 #--------------------------------------------------------------------
 
-%package devel
+%package -n %{devname}
 Summary:	Devel stuff for %{name}
 Group:		Development/KDE and Qt
 Requires:	kdelibs4-devel
 Requires:	pkgconfig(exiv2)
-Requires:	%{libkexiv2} = %{EVRD}
+Requires:	%{libname} = %{EVRD}
 Conflicts:	kdegraphics4-devel < 2:4.6.10
+Conflicts:	libkexiv2-devel < 2:4.12.1
+Obsoletes:	libkexiv2-devel < 2:4.12.1
 
-%description devel
+%description -n %{devname}
 This package contains header files needed if you wish to build applications
-based on kdegraphics.
+based on libkexiv2.
 
-%files devel
+%files -n %{devname}
 %{_includedir}/libkexiv2
+%{_libdir}/cmake/libkexiv2-*/*.cmake
 %{_libdir}/pkgconfig/libkexiv2.pc
 %{_libdir}/libkexiv2.so
 
@@ -72,6 +76,8 @@ based on kdegraphics.
 %changelog
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.12.1-1
 - New version 4.12.1
+- Rename devel package according to our policy
+- Update files
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.11.4-1
 - New version 4.11.4
