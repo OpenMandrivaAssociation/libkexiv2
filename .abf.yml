@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   libkexiv2-15.08.0.tar.xz: bd83a15f0727a2b2b712fc8c66bed4ee173c4a6e
+sources:
+  libkexiv2-15.08.1.tar.xz: 7ab70bfdd59f57ce4ce27440de42ee1b27031f15
