@@ -23,7 +23,6 @@ Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
 metadata as EXIF/IPTC and XMP.
 
 %files
-%doc AUTHORS COPYING NEWS README TODO
 %{_datadir}/libkexiv2/data/topicset.iptc-subjectcode.xml
 
 #--------------------------------------------------------------------
@@ -60,8 +59,8 @@ This package contains header files needed if you wish to build applications
 based on libkexiv2.
 
 %files -n %{devname}
-%{_includedir}/KExiv2
-%{_includedir}/libkexiv2_version.h
+%{_includedir}/KF5/KExiv2
+%{_includedir}/KF5/libkexiv2_version.h
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5KExiv2
 
