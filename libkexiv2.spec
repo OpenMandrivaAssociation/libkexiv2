@@ -17,13 +17,11 @@ BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(exiv2)
 Conflicts:	%{_lib}kexiv2_9 < 2:4.6.90
+Obsoletes:	libkexiv2 < 2:15.12.0
 
 %description
 Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
 metadata as EXIF/IPTC and XMP.
-
-%files
-%{_datadir}/libkexiv2/data/topicset.iptc-subjectcode.xml
 
 #--------------------------------------------------------------------
 
