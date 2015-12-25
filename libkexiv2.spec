@@ -14,7 +14,7 @@ Url:		http://www.kde.org
 Source0:	 http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
-)BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(exiv2)
 Conflicts:	%{_lib}kexiv2_9 < 2:4.6.90
 
