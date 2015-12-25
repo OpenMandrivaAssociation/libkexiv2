@@ -1,9 +1,9 @@
-%define major 11
-%define libname %mklibname kexiv2_ %{major}
-%define devname %mklibname kexiv2 -d
+%define major 5
+%define libname %mklibname KF5KExiv2_ %{major}
+%define libname %mklibname KF5KExiv2 -d
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
-Summary:	KDE4 wrapper around exiv2 library
+Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
 Version:	15.12.0
 Release:	1
@@ -11,10 +11,11 @@ Epoch:		2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
+Source0:	 http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(ECM)
+BuildRequires:	pkgconfig(Qt5Core)
+)BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(exiv2)
-BuildRequires:	automoc4
 Conflicts:	%{_lib}kexiv2_9 < 2:4.6.90
 
 %description
@@ -23,7 +24,7 @@ metadata as EXIF/IPTC and XMP.
 
 %files
 %doc AUTHORS COPYING NEWS README TODO
-%{_kde_appsdir}/libkexiv2/data/topicset.iptc-subjectcode.xml
+%{_datadir}/libkexiv2/data/topicset.iptc-subjectcode.xml
 
 #--------------------------------------------------------------------
 
@@ -31,6 +32,7 @@ metadata as EXIF/IPTC and XMP.
 Summary:	%{name} library
 Group:		System/Libraries
 Obsoletes:	%{_lib}kexiv2_10 < 2:4.8.90
+Obsoletes:	%{mklibname kexiv2_ 11} < 2:15.12.0
 Requires:	%{name}
 
 %description -n %{libname}
@@ -38,39 +40,39 @@ Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
 metadata as EXIF/IPTC and XMP.
 
 %files -n %{libname}
-%{_kde_libdir}/libkexiv2.so.%{major}*
+%{_libdir}/libKF5KExiv2.so.%{major}*
+%{_libdir}/libKF5KExiv2.so.15*
 
 #--------------------------------------------------------------------
 
 %package -n %{devname}
 Summary:	Devel stuff for %{name}
 Group:		Development/KDE and Qt
-Requires:	kdelibs4-devel
 Requires:	pkgconfig(exiv2)
 Requires:	%{libname} = %{EVRD}
 Conflicts:	kdegraphics4-devel < 2:4.6.10
 Conflicts:	libkexiv2-devel < 2:4.12.1
 Obsoletes:	libkexiv2-devel < 2:4.12.1
+Obsoletes:	%{mklibname kexiv2 -d} < 2:15.12.0
 
 %description -n %{devname}
 This package contains header files needed if you wish to build applications
 based on libkexiv2.
 
 %files -n %{devname}
-%{_includedir}/libkexiv2
-%{_libdir}/cmake/libkexiv2-*/*.cmake
-%{_libdir}/pkgconfig/libkexiv2.pc
-%{_libdir}/libkexiv2.so
+%{_includedir}/KExiv2
+%{_includedir}/libkexiv2_version.h
+%{_libdir}/*.so
+%{_libdir}/cmake/KF5KExiv2
 
 #----------------------------------------------------------------------
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4 \
-	-DCMAKE_MINIMUM_REQUIRED_VERSION=3.1
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
