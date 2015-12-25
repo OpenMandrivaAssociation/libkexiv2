@@ -6,7 +6,7 @@
 Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
 Version:	15.12.0
-Release:	1
+Release:	2
 Epoch:		2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -30,7 +30,6 @@ Summary:	%{name} library
 Group:		System/Libraries
 Obsoletes:	%{_lib}kexiv2_10 < 2:4.8.90
 Obsoletes:	%{mklibname kexiv2_ 11} < 2:15.12.0
-Requires:	%{name}
 
 %description -n %{libname}
 Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
