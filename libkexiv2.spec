@@ -1,6 +1,6 @@
 %define major 5
 %define libname %mklibname KF5KExiv2_ %{major}
-%define libname %mklibname KF5KExiv2 -d
+%define devname %mklibname KF5KExiv2 -d
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	KDE wrapper around exiv2 library
