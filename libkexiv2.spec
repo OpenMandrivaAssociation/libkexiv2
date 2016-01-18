@@ -15,7 +15,7 @@ Source0:	 http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
-BuildRequires:	pkgconfig(exiv2) >= 0.25-1
+BuildRequires:	pkgconfig(exiv2)
 Conflicts:	%{_lib}kexiv2_9 < 2:4.6.90
 Obsoletes:	libkexiv2 < 2:15.12.0
 
