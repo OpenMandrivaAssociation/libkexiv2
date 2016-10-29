@@ -5,7 +5,7 @@
 
 Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
-Version:	16.04.3
+Version:	16.08.2
 Release:	1.2
 Epoch:		2
 License:	GPLv2+
