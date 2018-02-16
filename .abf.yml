@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   libkexiv2-17.12.1.tar.xz: 9755024f88e2767a61f92d61870154461abd5b79
+sources:
+  libkexiv2-17.12.2.tar.xz: 80267e083da3d7704df229ae1d0c77e317d19f90
