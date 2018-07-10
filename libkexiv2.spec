@@ -6,7 +6,7 @@
 Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
 Version:	 18.04.2
-Release:	1.2
+Release:	1.3
 Epoch:		2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
