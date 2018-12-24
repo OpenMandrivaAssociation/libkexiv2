@@ -5,13 +5,14 @@
 
 Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
-Version:	 18.12.0
-Release:	1.4
+Version:	18.12.0
+Release:	2
 Epoch:		2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		libkexiv2-18.12.0-exiv2-0.27.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
@@ -64,7 +65,7 @@ based on libkexiv2.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
