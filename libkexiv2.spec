@@ -5,8 +5,8 @@
 
 Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Epoch:		2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -62,7 +62,6 @@ based on libkexiv2.
 
 %files -n %{devname}
 %{_includedir}/KF5/KExiv2
-%{_includedir}/KF5/libkexiv2_version.h
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5KExiv2
 
