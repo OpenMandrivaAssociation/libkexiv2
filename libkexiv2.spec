@@ -6,12 +6,13 @@
 Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
 Version:	23.04.1
-Release:	1
+Release:	2
 Epoch:		2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		libkexiv2-23.04.1-exiv2-0.28.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
