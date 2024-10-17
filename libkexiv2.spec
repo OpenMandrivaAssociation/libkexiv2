@@ -18,7 +18,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/graphics/libkexiv2/-/archive/%{gitbranch}/libkexiv2-%{gitbranchd}.tar.bz2#/libkexiv2-%{git}.tar.bz2
 %else
