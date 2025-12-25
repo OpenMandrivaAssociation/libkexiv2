@@ -11,7 +11,7 @@
 Summary:	KDE wrapper around exiv2 library
 Name:		libkexiv2
 Version:	25.12.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
@@ -40,6 +40,8 @@ metadata as EXIF/IPTC and XMP.
 Summary:	%{name} library for Qt 6
 Group:		System/Libraries
 Requires:	plasma6-%{name} = %{EVRD}
+# Not really the same, but we have to get rid of obsolete cruft at some point...
+Obsoletes:	%{mklibname KF5Exiv2} < %{EVRD}
 
 %description -n %{libname}
 Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures
@@ -57,6 +59,8 @@ Group:		Development/KDE and Qt
 Requires:	pkgconfig(exiv2)
 Requires:	%{libname} = %{EVRD}
 Requires:	plasma6-%{name} = %{EVRD}
+# Not really the same, but we have to get rid of obsolete cruft at some point...
+Obsoletes:	%{mklibname -d KF5Exiv2} < %{EVRD}
 
 %description -n %{devname}
 This package contains header files needed if you wish to build applications
